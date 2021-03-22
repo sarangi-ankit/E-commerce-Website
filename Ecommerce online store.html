@@ -70,21 +70,21 @@
           <li><a href="#">Stores</a></li>
           <li><a href="#">Contact</a></li>
           <input type="text" id="search" placeholder="search here..." onkeyup="searchElement()">
-          <select id="choice" onchange="catagory()">
-            <option value="catagory"></option>
+          <select id="choice" name="item" onchange="catagory(this)">
+            <option value="All">All</option>
             <option value="fruits">fruits</option>
             <option value="vegetables">vegetables</option>
           </select>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+          <li><a id="cart"href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <div class="container">
+  <div class="container" id="veg">
     <div class="row">
       <div id="tomatoDiv" class="col-sm-4 vegetables">
         <div class="panel panel-primary">
@@ -96,7 +96,7 @@
           <div class="panel-footer">
             <button id="tomatoButton" type="button" class="btn btn-primary">Buy
               Tomato's</button>
-              <button class="cart-btn" style="position:relative; left:90px">add item to cart</button>
+              <button  class="cart-btn" style="position:relative; left:90px" onclick="random()">add item to cart</button>
           </div>
         </div>
       </div>
@@ -110,7 +110,7 @@
           <div class="panel-footer">
             <button id="cucumberButton" type="button" class="btn btn-primary">Buy
               Cucumber's</button>
-              <button class="cart-btn" style="position:relative; left:75px">add item to cart</button>
+              <button class="cart-btn" style="position:relative; left:75px" onclick="random()">add item to cart</button>
           </div>
         </div>
       </div>
@@ -124,14 +124,14 @@
           <div class="panel-footer">
             <button id="chillyButton" type="button" class="btn btn-primary">Buy
               Chilli's</button>
-              <button class="cart-btn" style="position:relative; left:96px">add item to cart</button>
+              <button class="cart-btn" style="position:relative; left:96px" onclick="random()">add item to cart</button>
           </div>
         </div>
       </div>
     </div>
   </div><br>
 
-  <div class="container">
+  <div class="container" id="fruit">
     <div class="row">
       <div class="col-sm-4 fruits">
         <div class="panel panel-primary ">
@@ -143,7 +143,7 @@
           <div class="panel-footer">
             <button id="strawberyButton" type="button" class="btn btn-primary">Buy
               strawbery's</button>
-              <button class="cart-btn" style="position:relative; left:75px">add item to cart</button>
+              <button class="cart-btn" style="position:relative; left:75px" onclick="random()">add item to cart</button>
           </div>
         </div>
       </div>
@@ -157,7 +157,7 @@
           <div class="panel-footer">
             <button id="mangoButton" type="button" class="btn btn-primary">Buy
               Mango's</button>
-              <button class="cart-btn" style="position:relative; left:90px">add item to cart</button>
+              <button class="cart-btn" style="position:relative; left:90px" onclick="random()">add item to cart</button>
           </div>
         </div>
       </div>
@@ -171,7 +171,7 @@
           <div class="panel-footer">
             <button id="pineappleButton" type="button" class="btn btn-primary">Buy
               Pineapple's</button>
-              <button class="cart-btn" style="position:relative; left:80px" >add item to cart</button>
+              <button class="cart-btn" style="position:relative; left:80px" onclick="random()">add item to cart</button>
           </div>
         </div>
       </div>

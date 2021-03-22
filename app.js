@@ -1,21 +1,8 @@
+function random(){
+    window.location.href="#cart";
+}
 
-var cart=document.querySelectorAll(".cart-btn");
-// console.log(cart);
-for (var i=0;i<cart.length;i++){
-    // console.log("ankit")
-    cart[i].addEventListener("click",addToCart)
-}
-function addToCart(event){
-    var button=event.target;
-    var shopItem=button.parentElement.parentElement;
-    var title=shopItem.querySelectorAll(".title1")[0].innerHTML
-    var image=shopItem.querySelectorAll(".img-responsive")[0].src
-    console.log(title,image)
-    addItem(title,image)
-}
-function addItem(title,image){
-    console.log("ankit")
-}
+
 function error(){
     var text=document.querySelector(".form-control").value;
 
@@ -42,7 +29,7 @@ function searchElement(){
     
     for (var i=0;i<tag.length;i++){
         var text=tag[i].querySelectorAll(".title1")[0];
-        var list=text.textContent || text.innerHTML;
+        var list=text.textContent || text.innerText;
         if (list.toUpperCase().indexOf(input)>-1){
             tag[i].style.display="";
         }
@@ -53,10 +40,20 @@ function searchElement(){
         // console.log(text);
     }
  }
-function catagory(){
-    var a=document.getElementById("choice").value;
+function catagory(chnge){
+    if (chnge.value=="fruits"){
+        document.getElementById("veg").style.display="none";
+        document.getElementById("fruit").style.display="block"
+    }
+    else if(chnge.value=="All"){
+        document.getElementById("veg").style.display="block";
+        document.getElementById("fruit").style.display="block" 
+    }
+    else{
+        document.getElementById("veg").style.display="block";
+        document.getElementById("fruit").style.display="none"
+    }
     
-    random(a)
 }
 
 var allDivs=document.querySelectorAll(".panel-primary");
@@ -71,21 +68,6 @@ text.forEach(div=>{
         div.style.backgroundColor="white";
     })
 })
-var text=document.querySelectorAll(".fruits")
-var veg=document.querySelectorAll(".vegetables")
-function random(a){
-    text.forEach(div=>{
-        if (!div.classList.contains(a)){
-            div.style.display = 'none'
-        }
-        else{
-            div.style.display=""
-        } 
-    })
-    
-}
-
-
 
 
  
